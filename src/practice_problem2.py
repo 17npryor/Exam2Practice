@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Nathan Pryor.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -56,6 +56,33 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected = [8, 16, 11, -14, 14]
+    actual = practice_problem2a([2, 10, 5, -20, 8], 6)
+    print()
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 2:
+    expected = [23, 13, 17, 0, -2]
+    actual = practice_problem2a([21, 11, 15, -2, -4], 2)
+    print()
+    print('Test 2 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 3:
+    expected = [4, 5, 6, 7, 8]
+    actual = practice_problem2a([3, 4, 5, 6, 7], 1)
+    print()
+    print('Test 3 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 4:
+    expected = [75, -74, -7, 37]
+    actual = practice_problem2a([65, -84, -17, 27], 10)
+    print()
+    print('Test 4 expected:', expected)
+    print('       actual:  ', actual)
 
 def practice_problem2a(sequence, delta):
     """
@@ -84,6 +111,10 @@ def practice_problem2a(sequence, delta):
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
 
+    #total = 0
+    for k in range(0, len(sequence)):
+        total = sequence[k] + delta
+        return [total]
 
 def run_test_practice_problem2b():
     """ Tests the   practice_problem2b  function. """
@@ -178,6 +209,8 @@ def practice_problem2b(sequence):
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
 
+    for k in sequence:
+        return sequence[0]
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
